@@ -6,7 +6,7 @@ const User = require('../model/User');
 router.post('/register',async (req,res)=>{
 const user= new User(req.body);
 
-const userr =  user.save()
+const userr = await user.save()
 res.send(userr);
 
 });
